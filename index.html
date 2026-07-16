@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>foodml — AI prep forecasting for restaurant kitchens</title>
-<meta name="description" content="Forecast prep, kill waste, predict 86s before they happen. ML pipelines for the line. Built by chefs, for chefs.">
-<meta property="og:title" content="foodml — AI prep forecasting for restaurant kitchens">
-<meta property="og:description" content="Forecast prep, kill waste, predict 86s before they happen. ML pipelines built on 4.2M tickets across 1,247 kitchens.">
+<title>FoodML — AI Consulting for Restaurant &amp; Hospitality Kitchens</title>
+<meta name="description" content="AI consulting practice for restaurants and hospitality teams — menu tooling, prep systems, and workshops. Founded by a CIA-trained chef who ships his own code.">
+<meta property="og:title" content="FoodML — AI Consulting for Restaurant &amp; Hospitality Kitchens">
+<meta property="og:description" content="Menu AI, kitchen tools, and hands-on training for restaurant and hospitality teams. Founded by a CIA-trained chef who ships his own code.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://foodml.xyz">
 <meta name="twitter:card" content="summary">
@@ -56,8 +56,8 @@ nav {
 .nav-links { display: flex; gap: 22px; font-size: 11px; color: var(--ink-2); }
 .nav-links a:hover { color: var(--ink); }
 .nav-right { display: flex; align-items: center; gap: 12px; }
-.live-pill { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--ink-2); }
-.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-3);
+.avail-pill { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--ink-2); }
+.avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-3);
   box-shadow: 0 0 0 3px rgba(74,107,62,.18); animation: pulse 2.2s ease-in-out infinite; }
 @keyframes pulse {
   0%,100% { box-shadow: 0 0 0 3px rgba(74,107,62,.18); }
@@ -70,21 +70,7 @@ nav {
   cursor: pointer; transition: opacity .15s;
 }
 .badge:hover { opacity: .78; }
-.badge.solid  { background: var(--ink); color: var(--paper); }
 .badge.accent { background: var(--accent); color: #fff; border-color: var(--accent); }
-
-/* ticker */
-.ticker {
-  background: var(--ink); color: var(--paper);
-  border-bottom: 1px solid var(--ink);
-  overflow: hidden; white-space: nowrap;
-  font-family: var(--mono); font-size: 11px; padding: 7px 0;
-}
-.ticker-track { display: inline-block; animation: scroll-left 55s linear infinite; }
-.ticker-track:hover { animation-play-state: paused; }
-@keyframes scroll-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.t-good { color: #7bc67e; }
-.t-bad  { color: #e87878; }
 
 /* hero */
 .hero {
@@ -136,9 +122,9 @@ nav {
   padding-right: 140px;
 }
 .card-label { font-family: var(--mono); font-size: 11px; letter-spacing: .2em; color: #8a7355; margin-bottom: 6px; }
-.card-headline { font-family: var(--hand); font-size: 58px; line-height: 1.0; color: #1a1815; font-weight: 700; }
+.card-headline { font-family: var(--hand); font-size: 54px; line-height: 1.0; color: #1a1815; font-weight: 700; }
 .card-headline .red { color: #c8392e; }
-.card-subhead { font-family: var(--hand); font-size: 32px; line-height: 1.0; color: #1a1815; }
+.card-subhead { font-family: var(--hand); font-size: 30px; line-height: 1.15; color: #1a1815; }
 .card-meta { text-align: right; font-family: var(--mono); font-size: 11px; color: #5a4a30; line-height: 1.9; flex-shrink: 0; }
 .card-meta strong { color: #c8392e; }
 .card-columns { display: grid; grid-template-columns: 290px 1fr; gap: 36px; }
@@ -151,38 +137,19 @@ nav {
 .method-num { font-family: var(--hand); font-size: 30px; color: #c8392e; line-height: 0.9; }
 .method-list strong { font-weight: 700; }
 .card-note { font-family: var(--hand); font-size: 17px; margin-top: 14px; color: #5a4a30; transform: rotate(-1deg); display: inline-block; border-left: 2px solid #c8392e; padding-left: 10px; }
-.spark-box { border: 1px dashed #c8392e; padding: 10px; margin-top: 16px; background: rgba(200,57,46,.04); }
-.spark-box-label { font-family: var(--mono); font-size: 9px; color: #5a4a30; margin-bottom: 4px; }
 
-/* gauges */
-.gauges { background: var(--paper-2); border-bottom: 1px solid var(--ink); padding: 24px 28px; }
-.gauges-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
-.gauge { background: var(--paper); border: 1px solid var(--ink); padding: 14px 16px; }
-.gauge-label { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); }
-.gauge-val { font-family: var(--mono); font-size: 40px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin-top: 4px; }
-.gauge-val.xl   { font-size: 50px; }
-.gauge-val.good { color: var(--accent-3); }
-.gauge-val.bad  { color: var(--accent); }
-.gauge-foot { font-family: var(--mono); font-size: 10px; color: var(--ink-3); margin-top: 4px; }
-
-/* wall */
-.wall { padding: 32px 28px; border-bottom: 1px solid var(--ink); }
+/* about / founder */
+.about { padding: 32px 28px; border-bottom: 1px solid var(--ink); }
+.about-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .section-hd { max-width: 1080px; margin: 0 auto 16px; display: flex; justify-content: space-between; align-items: baseline; }
 .section-title { font-family: var(--serif); font-size: 26px; font-weight: 600; margin: 0; }
 .tag { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); }
-.wall-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(6,1fr); border: 1px solid var(--ink); }
-.r-tile { padding: 10px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); font-family: var(--mono); font-size: 10px; }
-.r-tile:nth-child(6n)  { border-right: none; }
-.r-tile:nth-child(n+7) { border-bottom: none; }
-.r-tile-top { display: flex; justify-content: space-between; }
-.r-tile-name { font-weight: 700; }
-.r-tile-loc  { color: var(--ink-3); }
-.r-tile-val  { font-weight: 700; margin-top: 3px; }
-.r-tile-val.good { color: var(--accent-3); }
-.r-tile-val.bad  { color: var(--accent); }
+.about-body { font-family: var(--serif); font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+.about-body p { margin: 0 0 12px; }
+.about-body strong { color: var(--ink); }
 
-/* pipeline */
-.pipeline { padding: 32px 28px; border-bottom: 1px solid var(--ink); }
+/* services (pipeline layout, repurposed) */
+.services-section { padding: 32px 28px; border-bottom: 1px solid var(--ink); }
 .pipeline-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--ink); }
 .p-step { padding: 18px 16px; border-right: 1px solid var(--ink); }
 .p-step:last-child { border-right: none; }
@@ -192,57 +159,18 @@ nav {
 .p-body  { font-family: var(--serif); font-size: 13px; margin-top: 8px; line-height: 1.4; color: var(--ink-2); }
 .p-foot  { font-family: var(--mono); font-size: 10px; color: var(--ink-3); margin-top: 10px; }
 
-/* pricing */
-.pricing { padding: 32px 28px; border-bottom: 1px solid var(--ink); background: var(--paper-2); }
-.pricing-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--ink); }
-.price-tier { padding: 22px 20px; border-right: 1px solid var(--ink); background: var(--paper); position: relative; }
-.price-tier:last-child { border-right: none; }
-.price-tier.hl { background: var(--ink); color: var(--paper); }
-.price-name { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.price-amount { font-family: var(--serif); font-size: 38px; font-weight: 700; line-height: 1; margin: 8px 0 2px; letter-spacing: -0.02em; }
-.price-amount small { font-size: 18px; font-weight: 400; }
-.price-sub { font-family: var(--mono); font-size: 10px; color: var(--ink-3); margin-bottom: 18px; }
-.price-tier.hl .price-sub { color: rgba(245,241,232,.45); }
-.price-features { list-style: none; margin: 0; padding: 0; font-family: var(--serif); font-size: 13.5px; line-height: 1.6; }
-.price-features li { display: flex; gap: 8px; border-bottom: 1px dotted rgba(26,24,21,.12); padding: 4px 0; }
-.price-features li:last-child { border-bottom: none; }
-.price-features li::before { content: '✓'; color: var(--accent); flex-shrink: 0; font-family: var(--mono); }
-.price-tier.hl .price-features li { border-bottom-color: rgba(255,255,255,.1); }
-.price-tier.hl .price-features li::before { color: #7bc67e; }
-.price-badge { position: absolute; top: -10px; left: 14px; background: var(--accent); color: #fff; font-family: var(--mono); font-size: 9px; letter-spacing: .1em; padding: 2px 8px; text-transform: uppercase; }
-
-/* service board */
-.service { padding: 32px 28px; border-bottom: 1px solid var(--ink); }
-.service-cols { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
-.panel { border: 1.5px solid var(--ink); border-radius: 2px; overflow: hidden; }
-.panel-hd { padding: 6px 12px; border-bottom: 1px solid var(--ink); display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; font-weight: 700; }
-.panel-hd.dark  { background: var(--ink); color: var(--paper); }
-.panel-hd.light { background: var(--paper-2); }
-.panel-body { padding: 14px; font-family: var(--mono); font-size: 11px; }
-.feed-row { display: grid; grid-template-columns: 50px 108px 1fr 60px; gap: 8px; padding: 4px 0; border-bottom: 1px dotted rgba(26,24,21,.18); line-height: 1.6; }
-.feed-row:last-child { border-bottom: none; }
-.feed-time  { color: var(--ink-3); }
-.feed-rest  { font-weight: 700; }
-.feed-val   { text-align: right; }
-.feed-val.good    { color: var(--accent-3); }
-.feed-val.bad     { color: var(--accent); }
-.feed-val.neutral { color: var(--ink-2); }
-.lb-row { display: grid; grid-template-columns: 22px 1fr 56px; gap: 8px; padding: 7px 0; border-bottom: 1px dotted rgba(26,24,21,.18); font-family: var(--mono); font-size: 11px; align-items: center; }
-.lb-row:last-child { border-bottom: none; }
-.lb-rank { color: var(--ink-3); }
-.lb-name { font-weight: 700; }
-.lb-val  { color: var(--accent-3); font-weight: 700; text-align: right; }
-
-/* testimonials */
-.testimonials {
-  padding: 44px 28px 56px; background: #3a342a;
-  background-image: repeating-linear-gradient(92deg,#3a342a 0 80px,#322c22 80px 81px,#3a342a 81px 220px);
-}
-.testimonials-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-.t-card { background: #fbf3df; padding: 20px 18px 16px; border: 1px solid #5a4a30; border-radius: 1px; box-shadow: 0 8px 20px rgba(0,0,0,.28); }
-.t-card::before { content: '"'; font-family: var(--serif); font-size: 50px; line-height: 0.4; color: #c8392e; display: block; }
-.t-text { font-family: var(--serif); font-size: 16px; font-weight: 500; font-style: italic; color: #1a1815; line-height: 1.35; margin-top: 8px; }
-.t-who  { font-family: var(--mono); font-size: 10px; color: #5a4a30; margin-top: 14px; }
+/* selected work */
+.work { padding: 32px 28px; border-bottom: 1px solid var(--ink); background: var(--paper-2); }
+.work-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--ink); }
+.work-tile { padding: 22px 20px; border-right: 1px solid var(--ink); background: var(--paper); position: relative; }
+.work-tile:last-child { border-right: none; }
+.work-name { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.work-kind { font-family: var(--serif); font-size: 20px; font-weight: 600; line-height: 1.15; margin: 8px 0 2px; letter-spacing: -0.01em; color: var(--accent); }
+.work-sub { font-family: var(--mono); font-size: 10px; color: var(--ink-3); margin-bottom: 16px; }
+.work-features { list-style: none; margin: 0; padding: 0; font-family: var(--serif); font-size: 13.5px; line-height: 1.6; }
+.work-features li { display: flex; gap: 8px; border-bottom: 1px dotted rgba(26,24,21,.12); padding: 4px 0; }
+.work-features li:last-child { border-bottom: none; }
+.work-features li::before { content: '·'; color: var(--accent); flex-shrink: 0; font-family: var(--mono); font-weight: 700; }
 
 /* cta */
 .cta { padding: 56px 28px 64px; text-align: center; border-bottom: 1px solid var(--ink); }
@@ -271,20 +199,14 @@ footer {
 
 /* responsive */
 @media (max-width: 960px) {
-  .wall-grid { grid-template-columns: repeat(3,1fr); }
-  .r-tile:nth-child(6n)   { border-right: 1px solid var(--ink); }
-  .r-tile:nth-child(3n)   { border-right: none; }
-  .r-tile:nth-child(n+10) { border-bottom: none; }
-  .gauges-inner   { grid-template-columns: 1fr 1fr; }
-  .service-cols   { grid-template-columns: 1fr; }
-  .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
+  .about-inner    { grid-template-columns: 1fr; }
+  .work-grid      { grid-template-columns: 1fr; }
+  .work-tile      { border-right: none; border-bottom: 1px solid var(--ink); }
+  .work-tile:last-child { border-bottom: none; }
   .pipeline-grid  { grid-template-columns: 1fr 1fr; }
   .p-step:nth-child(2) { border-right: none; }
   .p-step:nth-child(3) { border-top: 1px solid var(--ink); }
   .p-step:nth-child(4) { border-right: none; border-top: 1px solid var(--ink); }
-  .pricing-grid   { grid-template-columns: 1fr; }
-  .price-tier     { border-right: none; border-bottom: 1px solid var(--ink); }
-  .price-tier:last-child { border-bottom: none; }
   .card-columns   { grid-template-columns: 1fr; }
   .card-top       { padding-right: 120px; }
   .card-headline  { font-size: 42px; }
@@ -292,9 +214,7 @@ footer {
 }
 @media (max-width: 600px) {
   .card-headline  { font-size: 34px; }
-  .card-subhead   { font-size: 24px; }
-  .gauge-val      { font-size: 32px; }
-  .gauge-val.xl   { font-size: 40px; }
+  .card-subhead   { font-size: 22px; }
   .cta-title      { font-size: 30px; }
   .pipeline-grid  { grid-template-columns: 1fr; }
   .p-step         { border-right: none; border-top: 1px solid var(--ink); }
@@ -307,29 +227,24 @@ footer {
 <nav>
   <div>
     <span class="nav-logo">foodml<span class="dot">.xyz</span></span>
-    <span class="nav-sub">/ MISE-EN-PLACE 2.0</span>
+    <span class="nav-sub">/ AI CONSULTING</span>
   </div>
   <div class="nav-links">
-    <a href="#product">~/product</a>
-    <a href="#data">~/data</a>
-    <a href="#chefs">~/chefs</a>
-    <a href="#pricing">~/pricing</a>
+    <a href="#about">~/about</a>
+    <a href="#services">~/services</a>
+    <a href="#work">~/work</a>
     <a href="https://codingcuisine.substack.com" target="_blank" rel="noopener">~/blog</a>
   </div>
   <div class="nav-right">
-    <div class="live-pill">
-      <span class="live-dot"></span>
-      <span>LIVE · 1,247 restaurants</span>
+    <div class="avail-pill">
+      <span class="avail-dot"></span>
+      <span>Taking new engagements</span>
     </div>
-    <a class="badge accent" href="mailto:chef@foodml.xyz?subject=foodml%20demo%20request">Book demo →</a>
+    <a class="badge accent" href="mailto:chef@foodml.xyz?subject=FoodML%20inquiry">Get in touch →</a>
   </div>
 </nav>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="ticker-track"></div>
-</div>
-
-<!-- HERO: D3 recipe card -->
+<!-- HERO: index card -->
 <section class="hero">
   <div class="index-card">
     <div class="tape"></div>
@@ -337,232 +252,155 @@ footer {
     <div class="stain" style="width:52px;height:40px;bottom:80px;left:230px;opacity:.55"></div>
     <div class="chef-polaroid">
       <div class="chef-photo">
-        <img src="chef.jpg" alt="Mike Gutowski, founder of foodml — on the line at Shopify NYC"
+        <img src="chef.jpg" alt="Michael Gutowski, founder of FoodML — on the line at Shopify NYC"
              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%">
       </div>
       <div class="chef-caption">chef &amp; founder</div>
     </div>
     <div class="card-top">
       <div>
-        <div class="card-label">RECIPE &#x2116;01 &middot; the homepage</div>
-        <div class="card-headline">How to run a <span class="red">restaurant</span></div>
-        <div class="card-subhead">without losing your mind.</div>
+        <div class="card-label">RECIPE &#x2116;01 &middot; how it works</div>
+        <div class="card-headline">How to bring <span class="red">AI</span></div>
+        <div class="card-subhead">into a kitchen that actually runs on it.</div>
       </div>
       <div class="card-meta">
-        <div>SERVES: <strong>1,247 kitchens</strong></div>
-        <div>YIELDS: <strong>&minus;38% waste</strong></div>
-        <div>TIME: <strong>20-min setup</strong></div>
-        <div>DIFFICULTY: <strong>&#9733;&#9733;&#9734;&#9734;&#9734;</strong></div>
+        <div>LED BY: <strong>Michael Gutowski</strong></div>
+        <div>BASED: <strong>Brooklyn, NY</strong></div>
+        <div>FOCUS: <strong>Menus &middot; prep &middot; training</strong></div>
+        <div>STATUS: <strong>taking engagements</strong></div>
       </div>
     </div>
     <div class="card-columns">
       <div>
-        <div class="col-label">ingredients &mdash;</div>
+        <div class="col-label">what you bring &mdash;</div>
         <ul class="ing-list">
-          <li><span class="ing-qty">1</span><span>POS feed (any vendor)</span></li>
-          <li><span class="ing-qty">1</span><span>inventory app, or a clipboard</span></li>
-          <li><span class="ing-qty">~14</span><span>data sources (we wire them)</span></li>
-          <li><span class="ing-qty">4.2M</span><span>historical tickets, pre-trained</span></li>
-          <li><span class="ing-qty">1</span><span>sous chef who can read a phone</span></li>
-          <li><span class="ing-qty">0</span><span>consultants, swaps, IT projects</span></li>
-          <li><span class="ing-qty">&infin;</span><span>patience for vendor shenanigans</span></li>
+          <li><span class="ing-qty">1</span><span>kitchen willing to try something new</span></li>
+          <li><span class="ing-qty">1</span><span>POS system, or a clipboard</span></li>
+          <li><span class="ing-qty">1</span><span>menu, as it exists today</span></li>
+          <li><span class="ing-qty">1</span><span>team that can read a phone</span></li>
+          <li><span class="ing-qty">0</span><span>IT projects required</span></li>
           <li><span class="ing-qty">1 pinch</span><span>curiosity</span></li>
         </ul>
-        <div class="card-note">bring lunch, we&rsquo;ll bring the demo.</div>
+        <div class="card-note">bring lunch, we&rsquo;ll bring the whiteboard.</div>
       </div>
       <div>
-        <div class="col-label">method &mdash;</div>
+        <div class="col-label">how an engagement runs &mdash;</div>
         <ol class="method-list">
-          <li><span class="method-num">1.</span><span><strong>Plug in your POS.</strong> OAuth, no IT call. Two clicks. We talk Toast, Square, Resy, OpenTable, Lightspeed, Aloha &mdash; and ten more.</span></li>
-          <li><span class="method-num">2.</span><span><strong>Let the model taste.</strong> It chews 90 days of your tickets. Your kitchen, your weights. On-device, never sold.</span></li>
-          <li><span class="method-num">3.</span><span><strong>Receive your prep sheet.</strong> Every morning at 6am. Per-station, per-dish, per-cover. Your sous opens to it.</span></li>
-          <li><span class="method-num">4.</span><span><strong>Catch 86s before they catch you.</strong> Three-hour warning, average. Push when it matters, silence when it doesn&rsquo;t.</span></li>
-          <li><span class="method-num">5.</span><span><strong>Adjust, taste, repeat.</strong> Every shift retrains. Every Sunday a one-page report. Every quarter, coffee.</span></li>
+          <li><span class="method-num">1.</span><span><strong>Walk the line.</strong> I come in, watch service, and find where the actual friction is — not the org chart's version of it.</span></li>
+          <li><span class="method-num">2.</span><span><strong>Sketch the tool.</strong> Smallest thing that removes the most pain. Tested on real prep, not a slide deck.</span></li>
+          <li><span class="method-num">3.</span><span><strong>Ship &amp; train.</strong> Deployed with the team using it, in their language, adjusted during real service.</span></li>
+          <li><span class="method-num">4.</span><span><strong>Hand off.</strong> Documented so it runs without me. No dependency on a vendor relationship.</span></li>
         </ol>
-        <div class="spark-box">
-          <div class="spark-box-label">// cover-forecast accuracy &middot; 64% &rarr; 94% &middot; n=412</div>
-          <svg id="hero-spark" width="100%" height="36" preserveAspectRatio="none" style="display:block"></svg>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GAUGES: D4 -->
-<section class="gauges reveal">
-  <div class="gauges-inner">
-    <div class="gauge">
-      <div class="gauge-label">prep accuracy &middot; today</div>
-      <div class="gauge-val xl">94%</div>
-      <div class="gauge-foot">covers &plusmn;5%</div>
+<!-- ABOUT / FOUNDER -->
+<section class="about reveal" id="about">
+  <div class="section-hd">
+    <h2 class="section-title">The founder.</h2>
+    <span class="tag">&middot; CIA-trained &middot; ships his own code</span>
+  </div>
+  <div class="about-inner">
+    <div class="about-body">
+      <p>FoodML is an AI consulting practice for restaurants and hospitality teams, founded by <strong>Michael Gutowski</strong> — a CIA-trained chef who also builds software.</p>
+      <p>He's run kitchens in hotels (The Knickerbocker), a private membership club (Zero Bond), and corporate campuses — including three years inside the Food at Google program and, currently, Shopify NYC via Restaurant Associates — where he's built and shipped internal AI tooling (menu and allergen logic, prep math, kitchen signage automation) used daily in production.</p>
     </div>
-    <div class="gauge">
-      <div class="gauge-label">waste vs baseline</div>
-      <div class="gauge-val good">&minus;38%</div>
-      <div class="gauge-foot">avg 90d &middot; n=1,247</div>
-    </div>
-    <div class="gauge">
-      <div class="gauge-label">86 events &middot; 24h</div>
-      <div class="gauge-val bad">&darr;4</div>
-      <div class="gauge-foot">&minus;71% vs no-foodml</div>
-    </div>
-    <div class="gauge">
-      <div class="gauge-label">$ saved &middot; this hour</div>
-      <div class="gauge-val good" id="g-saved">$1,842</div>
-      <div class="gauge-foot">extrapolated &middot; n=1,247</div>
+    <div class="about-body">
+      <p>FoodML exists because the tools the industry builds for chefs generally aren't built by chefs. Engagements are small, hands-on, and scoped to one real problem at a time — not a platform pitch.</p>
+      <p>Reach out at <a href="mailto:chef@foodml.xyz" style="border-bottom:1px dotted var(--ink-3)">chef@foodml.xyz</a>.</p>
     </div>
   </div>
 </section>
 
-<!-- THE WALL: D4 -->
-<section class="wall reveal" id="data">
+<!-- SERVICES -->
+<section class="services-section reveal" id="services">
   <div class="section-hd">
-    <h2 class="section-title">The wall.</h2>
-    <span class="tag">&middot; example kitchens &middot; simulated data</span>
-  </div>
-  <div class="wall-grid" id="wall-grid"></div>
-</section>
-
-<!-- PIPELINE -->
-<section class="pipeline reveal" id="product">
-  <div class="section-hd">
-    <h2 class="section-title">The pipeline.</h2>
-    <span class="tag">// ingest &rarr; forecast &rarr; act</span>
+    <h2 class="section-title">What FoodML does.</h2>
+    <span class="tag">// scoped engagements, not a platform</span>
   </div>
   <div class="pipeline-grid">
     <div class="p-step">
-      <div class="p-num">01</div><div class="p-title">INGEST</div>
-      <div class="p-body">POS, inventory, weather, events, reservations &mdash; ~14 sources.</div>
-      <div class="p-foot">&middot; ~14 sources</div>
+      <div class="p-num">01</div><div class="p-title">MENU AI</div>
+      <div class="p-body">AI-assisted menu engineering, dietary &amp; allergen logic, recipe costing.</div>
+      <div class="p-foot">&middot; project-based</div>
     </div>
     <div class="p-step hl">
-      <div class="p-num">02</div><div class="p-title">FORECAST</div>
-      <div class="p-body">Per-dish covers, prep yields, 86 risk, labor curves.</div>
-      <div class="p-foot">&middot; 5-min cadence</div>
+      <div class="p-num">02</div><div class="p-title">KITCHEN TOOLS</div>
+      <div class="p-body">Custom internal tools — labels, signage, prep-math copilots — built for how your kitchen actually works.</div>
+      <div class="p-foot">&middot; fixed scope</div>
     </div>
     <div class="p-step">
-      <div class="p-num">03</div><div class="p-title">ACT</div>
-      <div class="p-body">Prep sheets, par updates, push alerts to the line.</div>
-      <div class="p-foot">&middot; iOS + KDS</div>
+      <div class="p-num">03</div><div class="p-title">TRAINING</div>
+      <div class="p-body">Hands-on AI workshops for culinary and ops teams. Practical, not theoretical.</div>
+      <div class="p-foot">&middot; half-day to multi-day</div>
     </div>
     <div class="p-step">
-      <div class="p-num">04</div><div class="p-title">LEARN</div>
-      <div class="p-body">Every shift retrains the model. Your kitchen, your weights.</div>
-      <div class="p-foot">&middot; on-device</div>
+      <div class="p-num">04</div><div class="p-title">ADVISORY</div>
+      <div class="p-body">Fractional advisor for food-tech founders and hospitality groups building for the kitchen.</div>
+      <div class="p-foot">&middot; monthly retainer</div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing reveal" id="pricing">
+<!-- SELECTED WORK -->
+<section class="work reveal" id="work">
   <div class="section-hd">
-    <h2 class="section-title">Honest pricing.</h2>
-    <span class="tag">// no contracts &middot; cancel anytime</span>
+    <h2 class="section-title">Selected work.</h2>
+    <span class="tag">&middot; a few examples, not a client list</span>
   </div>
-  <div class="pricing-grid">
-    <div class="price-tier">
-      <div class="price-name">Stage</div>
-      <div class="price-amount">$0</div>
-      <div class="price-sub">one kitchen &middot; 30 days</div>
-      <ul class="price-features">
-        <li>Core forecasts</li>
-        <li>Daily prep sheets</li>
-        <li>Email support</li>
+  <div class="work-grid">
+    <div class="work-tile">
+      <div class="work-name">Zero Bond</div>
+      <div class="work-kind">Menu redesign</div>
+      <div class="work-sub">private membership club, NYC</div>
+      <ul class="work-features">
+        <li>Menu-development engagement alongside chef Alfred Portale</li>
+        <li>Menu structure, seasonal rotation, kitchen workflow</li>
       </ul>
     </div>
-    <div class="price-tier hl">
-      <div class="price-badge">&middot; most kitchens</div>
-      <div class="price-name">Line</div>
-      <div class="price-amount">$420<small>/mo</small></div>
-      <div class="price-sub">per kitchen</div>
-      <ul class="price-features">
-        <li>Everything in Stage</li>
-        <li>86 alerts &middot; iOS app</li>
-        <li>POS connectors</li>
-        <li>Sunday report</li>
+    <div class="work-tile">
+      <div class="work-name">Confidential client</div>
+      <div class="work-kind">AI tooling &amp; training</div>
+      <div class="work-sub">hospitality consulting firm</div>
+      <ul class="work-features">
+        <li>Ongoing engagement — details under NDA</li>
+        <li>Available on request with client permission</li>
       </ul>
     </div>
-    <div class="price-tier">
-      <div class="price-name">Brigade</div>
-      <div class="price-amount" style="font-size:26px;letter-spacing:-.01em">talk to us</div>
-      <div class="price-sub">5+ kitchens</div>
-      <ul class="price-features">
-        <li>Everything in Line</li>
-        <li>Group dashboards</li>
-        <li>Custom integrations</li>
-        <li>On-call sous chef (us)</li>
+    <div class="work-tile">
+      <div class="work-name">Internal build</div>
+      <div class="work-kind">Kitchen AI tooling</div>
+      <div class="work-sub">Restaurant Associates @ Shopify NYC</div>
+      <ul class="work-features">
+        <li>Not a FoodML client — my own day-job build</li>
+        <li>Dish labels, allergen cards, BEOs, planograms, used daily</li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE BOARD: D4 -->
-<section class="service reveal" id="chefs">
-  <div class="section-hd">
-    <h2 class="section-title">Live from the line.</h2>
-    <span class="tag">&middot; example events &middot; ET</span>
-  </div>
-  <div class="service-cols">
-    <div class="panel">
-      <div class="panel-hd dark">
-        <span>&bull; foodml/service-board &middot; live</span>
-        <span id="live-time">--:--:--</span>
-      </div>
-      <div class="panel-body" id="service-feed"></div>
-    </div>
-    <div class="panel">
-      <div class="panel-hd light">WASTE LEADERBOARD &middot; 7d</div>
-      <div class="panel-body">
-        <div id="leaderboard"></div>
-        <div style="margin-top:14px;padding-top:10px;border-top:1px solid var(--ink)">
-          <div class="tag">CLAIM YOUR SPOT</div>
-          <div style="font-family:var(--serif);font-size:16px;line-height:1.3;margin-top:6px">Most kitchens hit <span style="color:var(--accent)">top-quartile</span> waste cuts inside 90 days.</div>
-          <div style="margin-top:12px"><a class="badge accent" href="mailto:chef@foodml.xyz?subject=foodml%20demo%20request">BOOK A DEMO &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS: D3 -->
-<section class="testimonials reveal">
-  <div class="testimonials-grid">
-    <div class="t-card" style="transform:rotate(-1.6deg)">
-      <div class="t-text">Cut food cost six points in 90 days. The prep sheet is gospel now.</div>
-      <div class="t-who">&mdash; M. ALVAREZ &middot; exec chef &middot; le coq</div>
-    </div>
-    <div class="t-card" style="transform:rotate(1.2deg)">
-      <div class="t-text">My sous knows what we&rsquo;ll 86 before I do. Spooky and great.</div>
-      <div class="t-who">&mdash; J. WONG &middot; co-owner &middot; maison wong</div>
-    </div>
-    <div class="t-card" style="transform:rotate(-0.7deg)">
-      <div class="t-text">Replaced three spreadsheets, two whiteboards, and one shouting match.</div>
-      <div class="t-who">&mdash; R. PARK &middot; gm &middot; the standard</div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta reveal">
-  <div class="cta-label">still reading?</div>
-  <div class="cta-title">Come run a service with us.<br><em>You bring the kitchen.</em></div>
+  <div class="cta-label">got a kitchen problem?</div>
+  <div class="cta-title">Bring me the thing that's <em>actually</em> broken.<br>We'll fix one thing well.</div>
   <div class="cta-btns">
-    <a class="btn btn-primary" href="mailto:chef@foodml.xyz?subject=foodml%20demo%20request">BOOK A DEMO &rarr;</a>
-    <a class="btn btn-secondary" href="#product">read the docs</a>
-    <span class="tag" style="margin-left:6px">&middot; 20 min &middot; we bring lunch</span>
+    <a class="btn btn-primary" href="mailto:chef@foodml.xyz?subject=FoodML%20inquiry">GET IN TOUCH &rarr;</a>
+    <a class="btn btn-secondary" href="https://codingcuisine.substack.com" target="_blank" rel="noopener">read the blog</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div>
-    <div>foodml<span style="color:var(--accent)">.xyz</span> &middot; the chef &middot; 2026</div>
+    <div>foodml<span style="color:var(--accent)">.xyz</span> &middot; Michael Gutowski &middot; 2026</div>
     <div class="sub">set in newsreader &amp; jetbrains mono &middot; written in a walk-in</div>
   </div>
   <div style="text-align:right">
     <div class="foot-links">
-      <a href="#product">~/product</a>
-      <a href="#pricing">~/pricing</a>
+      <a href="#services">~/services</a>
+      <a href="#work">~/work</a>
       <a href="https://codingcuisine.substack.com" target="_blank" rel="noopener">~/blog</a>
     </div>
     <div class="sub">chef@foodml.xyz</div>
@@ -570,117 +408,6 @@ footer {
 </footer>
 
 <script>
-// Deterministic pseudo-random (no Math.random — same result every load)
-function rand(seed, i) {
-  var x = Math.sin(seed * 127.1 + i * 311.7) * 43758.5453;
-  return x - Math.floor(x);
-}
-
-function sparkPath(seed, count, w, h) {
-  var v = 50 + seed * 7; var pts = [];
-  for (var i = 0; i < count; i++) {
-    v += (Math.sin(v / 7 + seed) + (rand(seed, i) - 0.42)) * 9;
-    v = Math.max(8, Math.min(92, v)); pts.push(v);
-  }
-  var xs = pts.map(function(_, i) { return (i / (pts.length - 1)) * w; });
-  var ys = pts.map(function(p) { return h - (p / 100) * h; });
-  return xs.map(function(x, i) { return (i ? 'L' : 'M') + x.toFixed(1) + ',' + ys[i].toFixed(1); }).join(' ');
-}
-
-function renderSpark(el, seed, color, fill, w, h) {
-  w = w || el.clientWidth || 400; h = h || 36;
-  var line = sparkPath(seed, 24, w, h);
-  el.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
-  el.innerHTML = (fill ? '<path d="' + line + ' L' + w + ',' + h + ' L0,' + h + ' Z" fill="' + color + '" fill-opacity=".12"/>' : '') +
-    '<path d="' + line + '" stroke="' + color + '" stroke-width="1.3" fill="none"/>';
-}
-
-function tileSpark(seed, color) {
-  var w = 120, h = 22, line = sparkPath(seed, 16, w, h);
-  return '<svg width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" style="display:block;margin:4px 0">' +
-    '<path d="' + line + '" stroke="' + color + '" stroke-width="1.2" fill="none"/></svg>';
-}
-
-// ticker
-var TICKER = [
-  ['LE BERNARDIN · prep ✓ halibut x42','good'],
-  ['MOMOFUKU · 86 risk: pork belly · 3h warning','bad'],
-  ['ATOMIX · waste −41% this week','good'],
-  ['THE BEAR · cover-fc 88 ±5 fri',''],
-  ['SUPERIORITY · brioche par −12%','good'],
-  ['LILIA · guanciale ↑ saturday surge',''],
-  ['NOMA·CPH · stage forecast +14%','good'],
-  ['MAISON WONG · forecast accuracy 94%','good'],
-  ['COQ AU VIN · trim → stock saved 2.1kg','good'],
-  ['ESTELA · oysters 86 → 12% risk','bad'],
-];
-(function() {
-  var html = [0,1].map(function() {
-    return TICKER.map(function(item) {
-      return '<span style="margin-right:36px"' + (item[1] ? ' class="t-' + item[1] + '"' : '') + '>· ' + item[0] + '</span>';
-    }).join('');
-  }).join('');
-  document.getElementById('ticker-track').innerHTML = html;
-})();
-
-// wall
-var RESTAURANTS = [
-  ['LE BERNARDIN','NYC','+18%',true],['MOMOFUKU','NYC','+12%',true],
-  ['ATOMIX','NYC','+24%',true],['THE BEAR','CHI','+9%',true],
-  ['LILIA','NYC','+7%',true],['ESTELA','NYC','−2%',false],
-  ['NOMA·CPH','CPH','+14%',true],['MAISON WONG','SF','+22%',true],
-  ['COQ AU VIN','PAR','+11%',true],['SUPERIORITY','CHI','+38%',true],
-  ['CARBONE','NYC','+6%',true],['THE STANDARD','LA','+16%',true],
-];
-document.getElementById('wall-grid').innerHTML = RESTAURANTS.map(function(r, i) {
-  var color = r[3] ? '#4a6b3e' : '#c8392e';
-  return '<div class="r-tile"><div class="r-tile-top"><span class="r-tile-name">' + r[0] +
-    '</span><span class="r-tile-loc">' + r[1] + '</span></div>' +
-    tileSpark(i + 1, color) +
-    '<div class="r-tile-val ' + (r[3] ? 'good' : 'bad') + '">margin ' + r[2] + '</div></div>';
-}).join('');
-
-// feed
-var FEED = [
-  ['22:31','LE BERNARDIN','prep ✓ halibut 6oz · 42 portions','+$184','good'],
-  ['22:34','SUPERIORITY','trim → stock · 2.1kg saved','+$28','good'],
-  ['22:36','MOMOFUKU','⚑ flag · pork belly running low','−$92','bad'],
-  ['22:38','ATOMIX','! 86 risk · uni · prob 41%','watch','neutral'],
-  ['22:41','ESTELA','oysters 86 risk → 12%','ok','neutral'],
-  ['22:44','COQ AU VIN','forecast updated · sat 88 covers','±5%','neutral'],
-  ['22:47','LILIA','guanciale ↑ par +14%','+$77','good'],
-];
-document.getElementById('service-feed').innerHTML = FEED.map(function(r) {
-  return '<div class="feed-row"><span class="feed-time">' + r[0] +
-    '</span><span class="feed-rest">' + r[1] + '</span><span>' + r[2] +
-    '</span><span class="feed-val ' + r[4] + '">' + r[3] + '</span></div>';
-}).join('');
-
-// leaderboard
-var LB = [['SUPERIORITY','−52%'],['LE BERNARDIN','−44%'],['ATOMIX','−41%'],['MAISON WONG','−38%'],['NOMA·CPH','−32%']];
-document.getElementById('leaderboard').innerHTML = LB.map(function(r, i) {
-  return '<div class="lb-row"><span class="lb-rank">#' + (i+1) +
-    '</span><span class="lb-name">' + r[0] +
-    '</span><span class="lb-val">' + r[1] + '</span></div>';
-}).join('');
-
-// clock (ET) + gauge flicker
-function tick() {
-  var el = document.getElementById('live-time');
-  if (el) el.textContent = new Date().toLocaleTimeString('en-US', { hour12: false, timeZone: 'America/New_York' }) + ' ET';
-}
-tick(); setInterval(tick, 1000);
-setInterval(function() {
-  var el = document.getElementById('g-saved');
-  if (el) el.textContent = '$' + (1800 + Math.floor(rand(7, Date.now() % 100) * 140)).toLocaleString();
-}, 3200);
-
-// hero spark (deterministic)
-window.addEventListener('load', function() {
-  var el = document.getElementById('hero-spark');
-  if (el) renderSpark(el, 9, '#c8392e', true);
-});
-
 // scroll reveal
 var ro = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('shown'); });
