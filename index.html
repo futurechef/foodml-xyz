@@ -4,12 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FoodML — AI Consulting for Restaurant &amp; Hospitality Kitchens</title>
-<meta name="description" content="AI consulting practice for restaurants and hospitality teams — menu tooling, prep systems, and workshops. Founded by a CIA-trained chef who ships his own code.">
+<meta name="description" content="AI consulting practice for restaurants and hospitality teams — menu tooling, prep systems, and workshops. Founded by a CIA-trained chef who ships his own code: ForkRecipe, alcheMISE and Platedraw.">
+<link rel="canonical" href="https://foodml.xyz/">
 <meta property="og:title" content="FoodML — AI Consulting for Restaurant &amp; Hospitality Kitchens">
 <meta property="og:description" content="Menu AI, kitchen tools, and hands-on training for restaurant and hospitality teams. Founded by a CIA-trained chef who ships his own code.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://foodml.xyz">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://foodml.xyz/img/forkrecipe-prep.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700;6..72,800&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -172,6 +174,35 @@ nav {
 .work-features li:last-child { border-bottom: none; }
 .work-features li::before { content: '·'; color: var(--accent); flex-shrink: 0; font-family: var(--mono); font-weight: 700; }
 
+
+/* projects (things I build) */
+.projects { padding: 32px 28px 40px; border-bottom: 1px solid var(--ink); }
+.proj-lede { max-width: 1080px; margin: -6px auto 20px; font-family: var(--serif); font-size: 15px; line-height: 1.6; color: var(--ink-2); }
+.proj-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.proj {
+  background: var(--paper); border: 1px solid var(--ink); display: flex; flex-direction: column;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.proj:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--ink); }
+.proj-shot { aspect-ratio: 4 / 3; overflow: hidden; border-bottom: 1px solid var(--ink); background: #faf5e8; }
+.proj-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.proj-shot.contain img { object-fit: contain; padding: 6px; }
+.proj-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+.proj-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.proj-name { font-family: var(--serif); font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+.proj-status { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: .1em; padding: 3px 7px; border: 1px solid var(--accent-3); color: var(--accent-3); border-radius: 2px; white-space: nowrap; }
+.proj-status.beta { border-color: var(--accent-2); color: #8a5a10; }
+.proj-kind { font-family: var(--mono); font-size: 11px; color: var(--accent); margin: 4px 0 10px; }
+.proj-desc { font-family: var(--serif); font-size: 14px; line-height: 1.55; color: var(--ink-2); margin: 0 0 10px; }
+.proj .work-features { margin-bottom: 14px; }
+.proj-link { margin-top: auto; font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--accent); border-top: 1px dotted var(--paper-edge); padding-top: 10px; }
+.proj-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.bench { max-width: 1080px; margin: 20px auto 0; display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--ink); background: var(--paper-2); }
+.bench-item { padding: 14px 16px; border-right: 1px solid var(--ink); font-family: var(--serif); font-size: 13.5px; line-height: 1.5; color: var(--ink-2); }
+.bench-item:last-child { border-right: none; }
+.bench-item b { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); margin-bottom: 4px; }
+.bench-item a { border-bottom: 1px dotted var(--ink-3); }
+
 /* cta */
 .cta { padding: 56px 28px 64px; text-align: center; border-bottom: 1px solid var(--ink); }
 .cta-label { font-family: var(--hand); font-size: 36px; color: var(--ink-3); }
@@ -201,6 +232,10 @@ footer {
 @media (max-width: 960px) {
   .about-inner    { grid-template-columns: 1fr; }
   .work-grid      { grid-template-columns: 1fr; }
+  .proj-grid      { grid-template-columns: 1fr 1fr; }
+  .bench          { grid-template-columns: 1fr; }
+  .bench-item     { border-right: none; border-bottom: 1px solid var(--ink); }
+  .bench-item:last-child { border-bottom: none; }
   .work-tile      { border-right: none; border-bottom: 1px solid var(--ink); }
   .work-tile:last-child { border-bottom: none; }
   .pipeline-grid  { grid-template-columns: 1fr 1fr; }
@@ -217,6 +252,11 @@ footer {
   .card-subhead   { font-size: 22px; }
   .cta-title      { font-size: 30px; }
   .pipeline-grid  { grid-template-columns: 1fr; }
+  .proj-grid      { grid-template-columns: 1fr; }
+  .section-hd     { flex-direction: column; gap: 4px; }
+  .projects, .about, .services-section, .work { padding-left: 16px; padding-right: 16px; }
+  nav { padding: 12px 16px; }
+  .avail-pill { display: none; }
   .p-step         { border-right: none; border-top: 1px solid var(--ink); }
   .p-step:first-child { border-top: none; }
 }
@@ -231,6 +271,7 @@ footer {
   </div>
   <div class="nav-links">
     <a href="#about">~/about</a>
+    <a href="#projects">~/projects</a>
     <a href="#services">~/services</a>
     <a href="#work">~/work</a>
     <a href="https://codingcuisine.substack.com" target="_blank" rel="noopener">~/blog</a>
@@ -311,6 +352,65 @@ footer {
       <p>FoodML exists because the tools the industry builds for chefs generally aren't built by chefs. Engagements are small, hands-on, and scoped to one real problem at a time — not a platform pitch.</p>
       <p>Reach out at <a href="mailto:chef@foodml.xyz" style="border-bottom:1px dotted var(--ink-3)">chef@foodml.xyz</a>.</p>
     </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects reveal" id="projects">
+  <div class="section-hd">
+    <h2 class="section-title">Things I build.</h2>
+    <span class="tag">&middot; my own products, live today</span>
+  </div>
+  <p class="proj-lede">Proof that the chef ships the code. These are FoodML&rsquo;s own food apps &mdash; built after service, shipped to the public, and made with the same care every engagement gets.</p>
+  <div class="proj-grid">
+
+    <a class="proj" href="https://forkrecipe.com" target="_blank" rel="noopener">
+      <div class="proj-shot"><img style="object-position:left top" src="img/forkrecipe-prep.jpg" alt="ForkRecipe Prep mode: a scaled mise en place checklist beside a step-by-step game plan with a running timer" loading="lazy" width="900" height="570"></div>
+      <div class="proj-body">
+        <div class="proj-top"><span class="proj-name">ForkRecipe</span><span class="proj-status">live</span></div>
+        <div class="proj-kind">recipes with lineage</div>
+        <p class="proj-desc">Every dish traces back to a canonical Mother Recipe, and every variation is a fork with a real diff. GitHub for cooking.</p>
+        <ul class="work-features">
+          <li>900+ structured recipes in an open dataset (CC BY-SA)</li>
+          <li>New: Prep mode &mdash; batch scaling, mise checklist, parallel game plan, timers</li>
+        </ul>
+        <span class="proj-link">forkrecipe.com &rarr;</span>
+      </div>
+    </a>
+
+    <a class="proj" href="https://alchemise.app" target="_blank" rel="noopener">
+      <div class="proj-shot"><img src="img/alchemise-plan.jpg" alt="alcheMISE week plan on a phone: breakfast, lunch and dinner cards for each day" loading="lazy" width="600" height="800"></div>
+      <div class="proj-body">
+        <div class="proj-top"><span class="proj-name">alcheMISE</span><span class="proj-status beta">beta</span></div>
+        <div class="proj-kind">meal planning for households</div>
+        <p class="proj-desc">Turns what you have into what&rsquo;s for dinner: a recipe box, the week&rsquo;s plan, a shopping list in aisle order and a pantry that knows what expires first.</p>
+        <ul class="work-features">
+          <li>Shared, live household plan &middot; web app + iPhone (TestFlight)</li>
+          <li>Connects to Claude: ask &ldquo;what&rsquo;s for dinner?&rdquo; and plan by chat</li>
+        </ul>
+        <span class="proj-link">alchemise.app &rarr;</span>
+      </div>
+    </a>
+
+    <a class="proj" href="https://codingcuisine.dev" target="_blank" rel="noopener">
+      <div class="proj-shot contain"><img src="img/platedraw-mccarren.svg" alt="Platedraw pen drawing of a plated dish generated from the seed word McCarren" loading="lazy" width="560" height="560"></div>
+      <div class="proj-body">
+        <div class="proj-top"><span class="proj-name">Platedraw</span><span class="proj-status">live</span></div>
+        <div class="proj-kind">give it a word, get a dish</div>
+        <p class="proj-desc">One seed word becomes a pantry-coherent recipe and a pen-line drawing of the plate. Same word, same dish &mdash; every time.</p>
+        <ul class="work-features">
+          <li>Generative, deterministic, zero dependencies</li>
+          <li>Fork a dish: same core, new sauce</li>
+        </ul>
+        <span class="proj-link">codingcuisine.dev &rarr;</span>
+      </div>
+    </a>
+
+  </div>
+  <div class="bench">
+    <div class="bench-item"><b>Open recipe dataset</b>The structured recipe catalog behind ForkRecipe, free to use. <a href="https://github.com/futurechef/forkrecipe-recipes" target="_blank" rel="noopener">github &rarr;</a></div>
+    <div class="bench-item"><b>ForkCard</b>A recipe-card builder with taste-profile watercolors and print-ready exports. On the bench.</div>
+    <div class="bench-item"><b>Coding Cuisine</b>Notes from the line on cooking, code and the tools in between. <a href="https://codingcuisine.substack.com" target="_blank" rel="noopener">read &rarr;</a></div>
   </div>
 </section>
 
@@ -399,6 +499,7 @@ footer {
   </div>
   <div style="text-align:right">
     <div class="foot-links">
+      <a href="#projects">~/projects</a>
       <a href="#services">~/services</a>
       <a href="#work">~/work</a>
       <a href="https://codingcuisine.substack.com" target="_blank" rel="noopener">~/blog</a>
